@@ -1,5 +1,27 @@
-<!-- Write your code below -->
- <h1>The Best Movies According to Max</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded JavaScript</title>
+    <script type="text/javascript">
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+ // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+clevertap.account.push({ "id": "TEST-9WW-Z56-447Z" }, "Region", "Target_Domain");
+clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+ (function () {
+		 var wzrk = document.createElement('script');
+		 wzrk.type = 'text/javascript';
+		 wzrk.async = true;
+		 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wzrk, s);
+  })();
+</script>
+</head>
+<body>
+    <h1>The Best Movies According to Max</h1>
  <h2>My Top 3 Movies of All Time.</h2>
  <hr />
  <h3>Heat</h3>
@@ -10,3 +32,7 @@
 </p>
 <h3>Inception</h3>
 <p>Christopher Nolan plumbs the philosophy of dreams to deliver big movie perfection.</p>
+
+</body>
+</html>
+ 
