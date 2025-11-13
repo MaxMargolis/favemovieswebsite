@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Movies</title>
     <script type="text/javascript">
-        var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
-        clevertap.account.push({ "id": "TEST-9WW-Z56-447Z" });
-        clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
-        clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
-        (function () {
-		    var wzrk = document.createElement('script');
-		    wzrk.type = 'text/javascript';
-		    wzrk.async = true;
-		    wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(wzrk, s);
-        })();
+      var clevertap = {
+        event: [],
+        profile: [],
+        account: [],
+        onUserLogin: [],
+        notifications: [],
+        privacy: [],
+      };
+      clevertap.account.push({ id: "TEST-9WW-Z56-447Z" });
+      clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
+      clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
+      (function () {
+        var wzrk = document.createElement("script");
+        wzrk.type = "text/javascript";
+        wzrk.async = true;
+        wzrk.src =
+          ("https:" == document.location.protocol
+            ? "https://d2r1yp2w7bby2u.cloudfront.net"
+            : "http://static.clevertap.com") + "/js/clevertap.min.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(wzrk, s);
+      })();
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>The Best Movies According to Max</h1>
- <h2>My Top 3 Movies of All Time.</h2>
- <hr />
- <h3>Heat</h3>
- <p>Michael Mann's masterpiece of dedication to one's craft and vocation.</p>
-<h3>Eden</h3>
-<p>Mia Hansen Love uses her storytelling and cinematography techniques expertly to immerse the viewer
-    in a deeply experiential tour of house music over a decade.
-</p>
-<h3>Inception</h3>
-<p>Christopher Nolan plumbs the philosophy of dreams to deliver big movie perfection.</p>
+    <h2>My Top 3 Movies of All Time.</h2>
+    <hr />
+    <h3>Heat</h3>
+    <p>Michael Mann's masterpiece of dedication to one's craft and vocation.</p>
+    <h3>Eden</h3>
+    <p>
+      Mia Hansen Love uses her storytelling and cinematography techniques
+      expertly to immerse the viewer in a deeply experiential tour of house
+      music over a decade.
+    </p>
+    <h3>Inception</h3>
+    <p>
+      Christopher Nolan plumbs the philosophy of dreams to deliver big movie
+      perfection.
+    </p>
+    <div>
+      <button onclick="fireBlueEvent()" style="margin-right: 10px">
+        Fire Blue Event
+      </button>
+      <button onclick="fireTigerEvent()">Fire Tiger Event</button>
+    </div>
 
-<button onclick="fireBlueEvent()">Fire Blue Event</button>
+    <script>
+      function fireBlueEvent() {
+        console.log("Blue Event Button Clicked!");
+        clevertap.event.push("Blue Event");
+      }
 
-  <script>
-    function fireBlueEvent() {
-      console.log("Blue Event Button Clicked!");
-      clevertap.event.push("Blue Event");
-    }
-  </script>
-
-</body>
+      function fireTigerEvent() {
+        console.log("Tiger Event Button Clicked!");
+        clevertap.event.push("Tiger Event");
+      }
+    </script>
+  </body>
 </html>
- 
