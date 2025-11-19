@@ -12,7 +12,7 @@
         onUserLogin: [],
         notifications: [],
         privacy: [],
-        region: "eu1"
+        region: "eu1",
       };
       clevertap.account.push({ id: "TEST-9WW-Z56-447Z" });
       clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
@@ -52,7 +52,9 @@
       <button onclick="fireBlueEvent()" style="margin-right: 10px">
         Fire Blue Event
       </button>
-      <button onclick="fireTigerEvent()">Fire Tiger Event</button>
+      <button onclick="fireTigerEvent()" style="margin-right: 10px">
+        Fire Tiger Event
+      </button>
       <button onclick="fireAstroidEvent()">Fire Astroid Event</button>
     </div>
 
