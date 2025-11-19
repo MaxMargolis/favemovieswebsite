@@ -58,7 +58,10 @@
       <button onclick="fireAstroidEvent()" style="margin-right: 10px">
         Fire Astroid Event
       </button>
-      <button onclick="fireNinjaEvent()">Fire Ninja Event</button>
+      <button onclick="fireNinjaEvent()" style="margin-right: 10px">
+        Fire Ninja Event
+      </button>
+      <button onclick="fireHamburgerEvent()">Fire Hamburger Event</button>
     </div>
 
     <script>
@@ -80,6 +83,11 @@
       function fireNinjaEvent() {
         console.log("Ninja Event Button Clicked!");
         clevertap.event.push("Ninja Event");
+      }
+
+      function fireHamburgerEvent() {
+        console.log("Hamburger Event Button Clicked!");
+        clevertap.event.push("Hamburger Event");
       }
     </script>
   </body>
