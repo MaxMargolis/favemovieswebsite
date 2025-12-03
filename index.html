@@ -86,13 +86,13 @@
       function fireNinjaEvent() {
         console.log("Ninja Event Button Clicked!");
         clevertap.event.push("Ninja Event");
-        clevertap.getVariableValue('Button Color')
+        console.log("Button Color variable value: ", clevertap.getVariableValue('Button Color'));
       }
 
       function fireHamburgerEvent() {
         console.log("Hamburger Event Button Clicked!");
         clevertap.event.push("Hamburger Event");
-        clevertap.getVariableValue('foo');
+        console.log("Foo variable value: ", clevertap.getVariableValue('foo'));
       }
 
       function fetchVariables() {
