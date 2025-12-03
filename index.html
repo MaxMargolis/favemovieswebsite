@@ -61,7 +61,10 @@
       <button onclick="fireNinjaEvent()" style="margin-right: 10px">
         Fire Ninja Event
       </button>
-      <button onclick="fireHamburgerEvent()">Fire Hamburger Event</button>
+      <button onclick="fireHamburgerEvent()" style="margin-right: 10px">
+        Fire Hamburger Event
+      </button>
+      <button onclick="fetchVariables()">Fetch Variables</button>
     </div>
 
     <script>
@@ -88,6 +91,12 @@
       function fireHamburgerEvent() {
         console.log("Hamburger Event Button Clicked!");
         clevertap.event.push("Hamburger Event");
+      }
+
+      function fetchVariables() {
+        clevertap.fetchVariables(() => {
+          console.log("Fetch variables successful");
+        });
       }
     </script>
   </body>
