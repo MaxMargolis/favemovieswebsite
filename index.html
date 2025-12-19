@@ -64,7 +64,13 @@
       <button onclick="fireHamburgerEvent()" style="margin-right: 10px">
         Fire Hamburger Event
       </button>
-      <button onclick="fetchVariables()">Fetch Variables</button>
+      <button onclick="fetchVariables()" style="margin-right: 10px">
+        Fetch Variables
+      </button>
+      <button onclick="setPropertyIsHungry(true)" style="margin-right: 10px">
+        IsHungry True
+      </button>
+      <button onclick="setPropertyIsHungry(false) ">IsHungry False</button>
     </div>
 
     <script>
@@ -86,20 +92,24 @@
       function fireNinjaEvent() {
         console.log("Ninja Event Button Clicked!");
         clevertap.event.push("Ninja Event");
-        console.log("Button Color variable value: ", clevertap.getVariableValue('Button Color'));
       }
 
       function fireHamburgerEvent() {
         console.log("Hamburger Event Button Clicked!");
         clevertap.event.push("Hamburger Event");
-        console.log("Foo variable value: ", clevertap.getVariableValue('foo'));
-        fetchVariables()
-        console.log("Button Color variable value: ", clevertap.getVariableValue('Button Color'));
       }
 
       function fetchVariables() {
         clevertap.fetchVariables(() => {
           console.log("Fetch variables successful");
+        });
+      }
+
+      function setPropertyIsHungry(isHungry) {
+        clevertap.profile.push({
+          Site: {
+            IsHungry: isHungry,
+          },
         });
       }
     </script>
