@@ -14,7 +14,7 @@
         privacy: [],
         region: "eu1",
       };
-      clevertap.account.push({ id: "TEST-9WW-Z56-447Z" });
+      clevertap.account.push({ id: "TEST-969-9KZ-767Z" });
       clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
       clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
       (function () {
@@ -74,7 +74,12 @@
       <button onclick="setPropertyIsHungry(true)" style="margin-right: 10px">
         IsHungry True
       </button>
-      <button onclick="setPropertyIsHungry(false) ">IsHungry False</button>
+      <button onclick="setPropertyIsHungry(false)" style="margin-right: 10px"> 
+        IsHungry False
+      </button>
+      <button onclick="loginMichaelJordan()">
+        Login MJ
+      </button>
     </div>
 
     <script>
@@ -113,9 +118,19 @@
         clevertap.profile.push({
           Site: {
             IsHungry: isHungry,
-          },
+          }
         });
       }
+
+      function loginMichaelJordan() {
+        clevertap.onUserLogin.push({
+          Site: {
+            "Name": "Michael Jordan",
+            "Identity": "abc_123",
+            "Email": "mj23@bulls.com"
+          }
+        })
+      };
     </script>
   </body>
 </html>
